@@ -182,7 +182,7 @@ function getHariIndo($date)
 
       <h2 class="text-2xl font-bold mb-6">Pilih Waktu</h2>
 
-      <form action="proses-booking.php" method="POST">
+      <form action="konfirmasi-booking.php" method="POST">
         <input type="hidden" name="doctor_id" value="<?= $doctor_id ?>">
         <input type="hidden" name="schedule_id" id="formScheduleId" value="<?= isset($schedules[0]['id']) ? $schedules[0]['id'] : '' ?>">
 

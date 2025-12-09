@@ -42,7 +42,7 @@ $stmt->execute();
 $count_patients = $stmt->get_result()->fetch_assoc()['total'];
 
 // --- QUERY UNTUK TABEL (Jadwal Hari Ini) ---
-$query_list = "SELECT b.id, b.booking_time, b.status, u.name as patient_name 
+$query_list = "SELECT b.id, b.booking_time, b.status, b.complaint, u.name as patient_name 
                FROM bookings b 
                JOIN users u ON b.user_id = u.id 
                WHERE b.doctor_id = ? AND b.booking_date = CURDATE() 
@@ -186,6 +186,7 @@ $result_list = $stmt->get_result();
             <tr class="text-gray-400 text-sm border-b border-gray-100">
               <th class="py-4 font-medium">Jam</th>
               <th class="py-4 font-medium">Nama Pasien</th>
+              <th class="py-4 font-medium">Keluhan</th>
               <th class="py-4 font-medium">Status</th>
               <th class="py-4 font-medium text-right">Aksi</th>
             </tr>
@@ -199,6 +200,9 @@ $result_list = $stmt->get_result();
                   </td>
                   <td class="py-4 font-medium">
                     <?= htmlspecialchars($row['patient_name']); ?>
+                  </td>
+                  <td class="py-4 text-sm text-gray-600 max-w-xs truncate">
+                    <?= htmlspecialchars($row['complaint']); ?>
                   </td>
                   <td class="py-4">
                     <?php
