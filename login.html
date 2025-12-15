@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Smart Health Care</title>
+    <title>Login - Medly</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body class="bg-gradient-to-br from-emerald-50 via-white to-cyan-50 min-h-screen flex items-center justify-center">
     <div class="bg-white p-8 rounded-3xl shadow-xl max-w-md w-full space-y-6 border border-emerald-100">
-      <h2 class="text-center text-2xl font-bold text-gray-800">Login Smart Health Care</h2>
+      <h2 class="text-center text-2xl font-bold text-gray-800">Login Medly</h2>
       <p class="text-center text-gray-500 text-sm">Silahkan masuk sebagai pasien atau dokter</p>
 
       <form class="space-y-5">
@@ -69,7 +69,8 @@
           if (data.role === "pasien") {
             window.location.href = "index.php";
           } else if (data.role === "dokter") {
-            window.location.href = "dashboard.php";
+            //window.location.href = "dashboard.php";
+            window.location.href = "index.php";
           }
         } catch (error) {
           alert("Kesalahan koneksi ke server");
