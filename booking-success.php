@@ -81,7 +81,7 @@ function tgl_indo($tanggal)
     <a href="pilih-dokter.php" class="bg-[#00ff88] hover:bg-emerald-500 text-white font-bold py-3 px-8 rounded-full shadow-lg transition">
       Booking Lagi
     </a>
-    <a href="dashboard.php" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg border border-gray-200 transition">
+    <a href="index.php" class="bg-white hover:bg-gray-100 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg border border-gray-200 transition">
       Kembali ke Home
     </a>
   </div>
