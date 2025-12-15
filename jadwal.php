@@ -15,7 +15,7 @@ $name = $_SESSION['user_name'];
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Health Care - Solusi Kesehatan Digital</title>
+  <title>Medly - Solusi Kesehatan Digital</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -65,7 +65,7 @@ $name = $_SESSION['user_name'];
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
             </svg>
           </div>
-          <span class="text-xl font-bold gradient-text">Smart Health Care</span>
+          <span class="text-xl font-bold gradient-text">Medly</span>
         </div>
         <div class="md:flex items-center gap-8">
           <h1 class="text-xl">

@@ -15,7 +15,7 @@ $name = $_SESSION['user_name'];
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smart Health Care - Solusi Kesehatan Digital</title>
+  <title>Medly - Solusi Kesehatan Digital</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -56,28 +56,31 @@ $name = $_SESSION['user_name'];
 </head>
 
 <body class="bg-gradient-to-br from-emerald-50 via-white to-cyan-50 scroll-smooth">
-  <nav class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+  <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-2">
-          <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-lg flex items-center justify-center">
+          <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-lg flex items-center justify-center shadow-lg shadow-emerald-200">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
             </svg>
           </div>
-          <span class="text-xl font-bold gradient-text">Smart Health Care</span>
+          <span class="text-xl font-bold gradient-text">Medly</span>
         </div>
-        <div class="md:flex items-center gap-8 ">
-          <h1 class="text-xl">Selamat datang, <span class="font-bold"><?= htmlspecialchars($name) ?>! 👋</span> </h1>
-          <a class="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition" href="logout.php">Logout</a>
 
-          <!-- <a href="/login.html" class="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition">Login</a> -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+          <a href="index.php" class="hover:text-emerald-500 transition">Home</a>
+          <!-- <a href="#about" class="hover:text-emerald-500 transition">About Us</a> -->
+          <a href="riwayat.php" class="flex items-center gap-1 text-gray-600 hover:text-emerald-500">
+            Riwayat Medis
+          </a>
+          <a href="#" class="hover:text-emerald-600 font-bold">Cek Jadwal</a>
+          <!-- <a href="#" class="hover:text-emerald-500 transition">Lokasi</a> -->
+
+          <a href="logout.php" class="bg-gradient-to-r from-cyan-400 to-emerald-400 text-white px-6 py-2.5 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 transition transform duration-200">
+            Logout
+          </a>
         </div>
-        <button class="md:hidden text-gray-700">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
       </div>
     </div>
   </nav>
@@ -93,7 +96,7 @@ $name = $_SESSION['user_name'];
           Kesehatan Anda,
           <span class="gradient-text">Prioritas Kami</span>
         </h1>
-        <p class="text-lg text-gray-600 leading-relaxed">Smart Health Care menghubungkan Anda dengan dokter terbaik melalui sistem janji temu yang mudah, cepat, dan terpercaya. Kelola kesehatan Anda dengan lebih efisien.</p>
+        <p class="text-lg text-gray-600 leading-relaxed">Medly menghubungkan Anda dengan dokter terbaik melalui sistem janji temu yang mudah, cepat, dan terpercaya. Kelola kesehatan Anda dengan lebih efisien.</p>
         <div class="flex flex-wrap gap-4">
           <a href="/list-dokter.php" class="bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition transform hover:scale-105"> Cek Jadwal Dokter </a>
           <a href="#about" class="bg-white text-gray-700 px-8 py-4 rounded-full font-semibold border-2 border-gray-200 hover:border-emerald-500 transition"> Pelajari Lebih Lanjut </a>
@@ -183,7 +186,7 @@ $name = $_SESSION['user_name'];
           <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600" alt="About" class="rounded-3xl shadow-2xl" />
         </div>
         <div class="space-y-6">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Mengapa Memilih <span class="gradient-text">Smart Health Care?</span></h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Mengapa Memilih <span class="gradient-text">Medly?</span></h2>
           <p class="text-gray-600 leading-relaxed">
             Kami adalah platform kesehatan digital yang mengintegrasikan teknologi modern dengan layanan kesehatan berkualitas. Dengan fokus pada kemudahan akses dan pengalaman pengguna yang optimal.
           </p>
@@ -231,7 +234,7 @@ $name = $_SESSION['user_name'];
   <section class="bg-gradient-to-r from-emerald-500 to-cyan-500 py-20">
     <div class="max-w-4xl mx-auto px-6 text-center text-white">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Siap Memulai Perjalanan Kesehatan Anda?</h2>
-      <p class="text-lg mb-8 text-emerald-50">Bergabunglah dengan ribuan pengguna yang telah mempercayai Smart Health Care</p>
+      <p class="text-lg mb-8 text-emerald-50">Bergabunglah dengan ribuan pengguna yang telah mempercayai Medly</p>
       <div class="flex flex-wrap gap-4 justify-center">
         <a href="/list-dokter.php" class="bg-white text-emerald-600 px-8 py-4 rounded-full font-semibold hover:shadow-xl transition transform hover:scale-105"> Mulai Sekarang </a>
         <a href="#about" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-emerald-600 transition"> Hubungi Kami </a>
@@ -245,7 +248,7 @@ $name = $_SESSION['user_name'];
         <div>
           <div class="flex items-center gap-2 mb-4">
             <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-lg"></div>
-            <span class="text-white font-bold">Smart Health Care</span>
+            <span class="text-white font-bold">Medly</span>
           </div>
           <p class="text-sm">Platform kesehatan digital terpercaya untuk kemudahan akses layanan medis Anda.</p>
         </div>
@@ -269,14 +272,14 @@ $name = $_SESSION['user_name'];
         <div>
           <h4 class="text-white font-semibold mb-4">Kontak</h4>
           <ul class="space-y-2 text-sm">
-            <li>Email: info@smarthealthcare.id</li>
+            <li>Email: info@medly.id</li>
             <li>Phone: (021) 1234-5678</li>
             <li>Senin - Jumat: 08:00 - 17:00</li>
           </ul>
         </div>
       </div>
       <div class="border-t border-gray-800 pt-8 text-center text-sm">
-        <p>&copy; 2025 Smart Health Care. All rights reserved.</p>
+        <p>&copy; 2025 Medly. All rights reserved.</p>
       </div>
     </div>
   </footer>
